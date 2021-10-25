@@ -41,8 +41,10 @@ def update(request):
     return JsonResponse({'resutl':'success'})
 
 def delete(request):
+    
+
     if request.method == 'GET':
         obj= PhoneNo.objects.get(id=request.GET['id'])
         obj.delete()
-
+           
     return JsonResponse({'resutl':'success'})
